@@ -1,0 +1,27 @@
+---
+#title: "equation guide"
+#author: "quinn_asena"
+#date: "28 March 2019"
+#output: html_document
+---
+
+```{r setup, include=FALSE}
+#knitr::opts_chunk$set(echo = TRUE)
+```
+
+##### __Equation Guide__
+
+* $N$ is the population at a given time-step (t)  
+* $\lambda$ is the finite rate of increase
+    * $\lambda \gtrapprox 1.02$ is positive growth (at $N = 10$ and $K = 1000$)
+    * $\lambda \lessapprox 1.01$ is negative growth (at $N = 10$ and $K = 1000$)
+* $K$ is the carrying capacity
+
+
+##### __Limit Cycles and Chaos__
+At $N = 10$ and $K = 1000$
+
+* $\lambda < 3$ population reaches $K$ with dampening oscillations
+* $3 < \lambda < 3.4$: two point stable limit cycle
+* $3.4 < \lambda < 3.6$: limit cycle increase geometrically (2, 4, 6, 8...)
+* $\lambda > 3.6$: aperiodic (irregular) patterns known as chaos.
