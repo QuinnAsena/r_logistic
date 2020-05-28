@@ -41,9 +41,10 @@ Where:
 * $\lambda$ is the finite rate of increase
     * $\lambda \gtrapprox 1.02$ is positive growth (at $N = 10$ and $K = 1000$)
     * $\lambda \lessapprox 1.01$ is negative growth (at $N = 10$ and $K = 1000$)
+    * $\lambda = 1.03$ is stable (at $N = 42$ and $K = 1442$)
 * $K$ is the carrying capacity
 
-Note that in this density dependent model there are two points of stability: $N=0$ (extinction or extirpation) and $K$. Unlike equation 1, in equation 2, $K$ changes depending on the growth rate $\lambda$ (and so values of $\lambda$ that are positive growth rates are dependent on starting population and carrying capacity). For Example, if $\lambda = 2$ the population stabalises at $K/2$. This is not the case for the continuous exponential model which is not covered here.
+Note that in this density dependent model there are three points of stability: $N=0$ (extinction or extirpation) and $K$ but the third, zero growth at $N>0$, is dependent on the other inputs. Unlike equation 1, in equation 2, $K$ changes depending on the growth rate $\lambda$ (and so values of $\lambda$ that are positive growth rates are dependent on starting population and carrying capacity). For Example, if $\lambda = 2$ the population stabalises at $K/2$. This is not the case for the continuous exponential model which is not covered here.
 
 #### Limit cycles and chaos:
 A topic that has fascinated scientists from many disciplines is how simple equations can give rise to complex dynamics. This is far beyond the scope of this page however can be explored in the models by altering the growth rates. While demonstrations of populations growing chaotically are rare, non-linearities and chaos in general are not and we can produce these dynamics in these simple equations. The following values can be input in the model tabs to see the effect:

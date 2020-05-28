@@ -15,6 +15,7 @@
 * $\lambda$ is the finite rate of increase
     * $\lambda \gtrapprox 1.02$ is positive growth (at $N = 10$ and $K = 1000$)
     * $\lambda \lessapprox 1.01$ is negative growth (at $N = 10$ and $K = 1000$)
+    * $\lambda = 1.03$ is stable (at $N = 42$ and $K = 1442$)
 * $K$ is the carrying capacity
 
 
