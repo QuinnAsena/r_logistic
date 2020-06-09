@@ -5,8 +5,8 @@ account: quinnasena
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 814169
-bundleId: 2762622
+bundleId: 3202504
 url: https://quinnasena.shinyapps.io/r_logistic/
-when: 1580345624.30121
+when: 1590705436.86664
 asMultiple: FALSE
 asStatic: FALSE
