@@ -22,7 +22,7 @@
 ##### __Limit Cycles and Chaos__
 At $N = 10$ and $K = 1000$
 
-* $\lambda < 3$ population reaches $K$ with dampening oscillations
-* $3 < \lambda < 3.4$: two point stable limit cycle
-* $3.4 < \lambda < 3.6$: limit cycle increase geometrically (2, 4, 6, 8...)
+* $\lambda < 3$: population reaches $K$ with damping oscillations
+* $3 < \lambda < 3.4$: two-point stable limit cycle
+* $3.4 < \lambda < 3.6$: limit cycles increase geometrically (periods of 2, 4, 8, 16...)
 * $\lambda > 3.6$: aperiodic (irregular) patterns known as chaos.

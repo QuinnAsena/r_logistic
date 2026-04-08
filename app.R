@@ -36,7 +36,7 @@ ui <- fluidPage(
   )# close sidebarLayout
     ), #close tabPanel1
 ##################################################
-#####  Second tab for labmda growth model    #####
+#####  Second tab for lambda growth model    #####
 ##################################################
 tabPanel("Lambda discrete model",
          h1(includeHTML("lambda_model_title_text.html")),
@@ -77,31 +77,31 @@ tabPanel("Model descriptions",
 #####              Functions                 #####
 ##################################################
 # can be sourced from directory
-##### function for r model (Nt+1 = Nt + rdNt * (1-Nt/K))
+##### function for r model (Nt+1 = Nt + rd*Nt * (1-Nt/K))
 r_logistic.fun <- function(r = 0.05, K = 100, N_pop = 10, t = 100)
 {
   N <- vector("numeric", length = t)
   N[1] <- N_pop
   for (i in 2:t)
   {
-    N[i] <- N[i-1] + (r * N[i-1] * (1 - N[i-1] / K))   # version 2 with R
+    N[i] <- N[i-1] + (r * N[i-1] * (1 - N[i-1] / K))   # discrete logistic with r
   }
   N <- ifelse(N <= 0, 0, N)
   return(N)
 }
-##### function for lambda model (Nt+1 = lambdaNt (1-Nt/K))
+##### function for lambda model (Nt+1 = lambda*Nt*(1-Nt/K))
 lambda_logistic.fun <- function(lambda = 1.2, K = 100, N_pop = 10, t = 100)
 {
   N <- vector("numeric", length = t)
   N[1] <- N_pop
   for (i in 2:t)
   {
-    N[i] <- lambda * N[i-1] * (1 - N[i-1] / K)   # version 2 with R
+    N[i] <- lambda * N[i-1] * (1 - N[i-1] / K)   # discrete logistic with lambda
   }
   N <- ifelse(N <= 0, 0, N)
   return(N)
 }
-##### Function for rate of change (Nt - Nt+1)
+##### Function for rate of change (Nt+1 - Nt)
 pop_roc_fun <- function(pop_vec){
   for (i in length(pop_vec):2)
   {
