@@ -1,0 +1,25 @@
+---
+format:
+  html:
+    minimal: true
+---
+
+##### **Equation Guide**
+
+- $N$ — population size at time-step $t$
+- $r_d$ — discrete growth factor
+    - $r = 0$: no growth
+    - $r > 0$: positive growth
+    - $r < 0$: negative growth (decline)
+- $K$ — carrying capacity (maximum sustainable population)
+
+##### **Limit Cycles and Chaos**
+
+At $N = 10$ and $K = 1000$:
+
+| Growth rate | Behaviour |
+|:---|:---|
+| $r_d < 2.000$ | Damping oscillations toward $K$ |
+| $2.000 < r_d < 2.449$ | Two-point stable limit cycle |
+| $2.449 < r_d < 2.570$ | Geometric increase in limit-cycle period (2, 4, 8, 16 …) |
+| $r_d > 2.570$ | Aperiodic (chaotic) dynamics |
