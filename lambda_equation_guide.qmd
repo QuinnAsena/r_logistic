@@ -1,0 +1,25 @@
+---
+format:
+  html:
+    minimal: true
+---
+
+##### **Equation Guide**
+
+- $N$ — population size at time-step $t$
+- $\lambda$ — finite rate of increase
+    - $\lambda \gtrapprox 1.02$: positive growth (at $N = 10$, $K = 1000$)
+    - $\lambda \lessapprox 1.01$: negative growth (at $N = 10$, $K = 1000$)
+    - $\lambda = 1.03$: stable equilibrium (at $N = 42$, $K = 1442$)
+- $K$ — carrying capacity (maximum sustainable population)
+
+##### **Limit Cycles and Chaos**
+
+At $N = 10$ and $K = 1000$:
+
+| Growth rate | Behaviour |
+|:---|:---|
+| $\lambda < 3$ | Damping oscillations toward $K$ |
+| $3 < \lambda < 3.4$ | Two-point stable limit cycle |
+| $3.4 < \lambda < 3.6$ | Geometric increase in limit-cycle period (2, 4, 8, 16 …) |
+| $\lambda > 3.6$ | Aperiodic (chaotic) dynamics |

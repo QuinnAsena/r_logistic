@@ -1,0 +1,9 @@
+---
+format:
+  html:
+    minimal: true
+---
+
+## Discrete Population Growth Model ($\lambda$)
+
+$$N_{t+1} = \lambda\, N_t \left(1 - \frac{N_t}{K}\right)$$

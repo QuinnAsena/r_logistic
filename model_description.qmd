@@ -1,0 +1,141 @@
+---
+format:
+  html:
+    minimal: true
+bibliography: library.bib
+---
+
+### Model Description
+
+Many population growth models exist in the biological and ecological literature.
+These equations are also used to describe a wide range of phenomena beyond
+population growth. Here we explore two simple versions of **deterministic,
+discrete, density-dependent, logistic growth models**.
+
+By *discrete* we mean that we use difference equations (Equations 1 and 2 below)
+rather than a continuous growth equation (e.g.
+$\frac{dN}{dt} = rN\!\left(1 - \frac{N}{K}\right)$). Time is represented by
+discrete steps: $N_t$ denotes the population at the current step and $N_{t+1}$
+the population at the next step. By *deterministic* we mean that no
+stochasticity (random variability) is included — for any given set of model
+parameters the trajectory is always the same. By *density-dependent* we mean
+that there is a defined limit ($K$) to a population's growth: as the population
+approaches $K$ the per-capita growth rate declines toward zero.
+
+The aim of this page is to provide an interactive introduction to these
+population models, not a detailed mathematical treatment. The models can be set
+up to reproduce figures in, for example, @Gotelli2001, @Gillman2005, and
+@Gillman2009, and then experimented with. The app is suitable for lectures,
+tutorials, or independent study. All information here is compiled from the
+references listed at the end, which cover calculating $r$, the relationship
+between $r$ and $\lambda$, and the effects of introducing stochasticity into the
+growth rate and carrying-capacity terms.
+
+In the model tabs you can investigate the effects of different growth rates,
+starting populations, and carrying capacities on a logistically growing
+population. Note that these equations represent an idealised population in an
+idealised environment with a constant reproduction rate at every time-step.
+
+In both model tabs, the **upper plot** shows population size over time and the
+**lower plot** shows the rate of population change, defined as $\Delta N_t =
+N_{t+1} - N_t$. The rate at which a population grows depends on (a) the current
+size of the population ($N$) and (b) how close it is to carrying capacity ($K$).
+Growth is fastest near $K/2$ (approximately, in the discrete model) because that
+is where the maximum number of reproducing individuals coincides with the most
+available resources.
+
+---
+
+#### Equation 1 [@Gotelli2001]
+
+$$N_{t+1} = N_t + r_d\, N_t \left(1 - \frac{N_t}{K}\right)$$
+
+Where:
+
+- $N$ — population at time-step $t$
+- $r_d$ — discrete growth factor
+    - $r = 0$: no growth
+    - $r > 0$: positive growth
+    - $r < 0$: negative growth (decline)
+- $K$ — carrying capacity
+
+This equation has three equilibria: $N = K$ (at capacity), $N = 0$ (extinction
+or extirpation), and $r = 0$ (zero growth).
+
+---
+
+#### Equation 2 [@Gillman2005; @Gillman2009]
+
+$$N_{t+1} = \lambda\, N_t \left(1 - \frac{N_t}{K}\right)$$
+
+Where:
+
+- $N$ — population at time-step $t$
+- $\lambda$ — finite rate of increase
+    - $\lambda \gtrapprox 1.02$: positive growth (at $N = 10$, $K = 1000$)
+    - $\lambda \lessapprox 1.01$: negative growth (at $N = 10$, $K = 1000$)
+    - $\lambda = 1.03$: stable equilibrium (at $N = 42$, $K = 1442$)
+- $K$ — carrying capacity
+
+Unlike Equation 1, the equilibrium population size in Equation 2 depends on the
+growth rate $\lambda$ (e.g. at $\lambda = 2$ the population stabilises at
+$K/2$). Whether a given $\lambda$ yields positive growth therefore depends on
+starting population and carrying capacity. This is not the case for the
+continuous logistic model, which is not covered here.
+
+---
+
+#### Limit Cycles and Chaos
+
+Simple deterministic equations can give rise to surprisingly complex dynamics.
+While truly chaotic population trajectories are rare in nature, non-linear
+dynamics and chaos are widespread in other domains — and we can produce them here
+by adjusting growth rates.
+
+**Equation 1 (r discrete model tab)** at $N = 10$, $K = 1000$:
+
+| Growth rate | Behaviour |
+|:---|:---|
+| $r_d < 2.000$ | Damping oscillations toward $K$ |
+| $2.000 < r_d < 2.449$ | Two-point stable limit cycle |
+| $2.449 < r_d < 2.570$ | Geometric increase in limit-cycle period (2, 4, 8, 16 …) |
+| $r_d > 2.570$ | Aperiodic (chaotic) dynamics |
+
+**Equation 2 (Lambda discrete model tab)** at $N = 10$, $K = 1000$:
+
+| Growth rate | Behaviour |
+|:---|:---|
+| $\lambda < 3$ | Damping oscillations toward $K$ |
+| $3.0 < \lambda < 3.4$ | Two-point stable limit cycle |
+| $3.4 < \lambda \lessapprox 3.6$ | Geometric increase in limit-cycle period (2, 4, 8, 16 …) |
+| $\lambda \gtrapprox 3.6$ | Aperiodic (chaotic) dynamics |
+
+---
+
+#### Model Assumptions [@Gotelli2001]
+
+The following assumptions underlie the general logistic growth model. The
+discrete models presented here relax the continuity assumption but share the
+remaining assumptions.
+
+- **No time lags:** the growth rate responds instantaneously to changes in
+  population size and remains constant through time.
+- **No age, size, or sex structure:** birth and death rates do not vary with
+  age, body size, or sex. Every individual is immediately reproductive with no
+  distinct life stages. This assumption is most realistic for organisms such as
+  bacteria or protozoa.
+- **No genetic structure:** all individuals share the same birth and death rates;
+  no underlying genetic variation exists.
+- **Constant carrying capacity:** resource availability remains fixed through
+  time.
+- **Linear density dependence:** for every individual added, the per-capita
+  growth rate decreases linearly toward zero when $N = K$.
+- **No immigration or emigration:** movement of individuals into or out of the
+  population is assumed not to occur, or to be balanced.
+
+More complex models relax these assumptions. In practice, violating some
+assumptions can substantially affect the accuracy of projections, but these
+simple models still illustrate the fundamental principles of logistic population
+growth.
+
+#### References

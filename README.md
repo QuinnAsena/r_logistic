@@ -1,6 +1,6 @@
 # Discrete Logistic Population Growth Models
 
-An interactive [Shiny](https://shiny.rstudio.com/) application for exploring deterministic, discrete, density-dependent logistic population growth models.
+An interactive [Shiny](https://shiny.posit.co/) application for exploring deterministic, discrete, density-dependent logistic population growth models.
 
 ## Overview
 
@@ -21,13 +21,24 @@ A third tab provides background on the models, their assumptions, and references
 - Adjustable sliders for starting population (*N*), carrying capacity (*K*), growth rate (*r* or *λ*), and time (*t*).
 - Real-time plots of population size over time and rate of population change vs. population size.
 - Demonstrates stable equilibria, damping oscillations, limit cycles, and chaotic dynamics depending on the growth rate.
+- Plot lines turn red when growth-rate parameters enter the chaotic regime.
 
 ## Running the App
 
 ### Prerequisites
 
 - [R](https://cran.r-project.org/) (≥ 3.5)
-- R packages: `shiny`, `grDevices`, `knitr`
+- R package: `shiny`
+- [Quarto](https://quarto.org/) (for rendering the `.qmd` documentation files)
+
+### Render Documentation
+
+Before launching the app for the first time (or after editing any `.qmd` file), render the HTML includes:
+
+```bash
+# From the project directory
+for f in *.qmd; do quarto pandoc "$f" -o "${f%.qmd}.html" --mathjax --from markdown; done
+```
 
 ### Launch
 
