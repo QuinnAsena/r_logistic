@@ -1,8 +1,12 @@
 ---
+title: "Exploration of two logistic growth models"
+author: "Quinn Asena"
 format:
   html:
-    minimal: true
+    code-fold: false
+    link-external-newwindow: true
 bibliography: library.bib
+embed-resources: true
 ---
 
 ### Model Description
